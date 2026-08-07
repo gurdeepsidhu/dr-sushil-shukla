@@ -1,0 +1,580 @@
+================================================================================
+    डॉक्टर वेबसाइट टेम्पलेट — पूरी गाइड (COMPLETE GUIDE IN HINDI)
+    Doctor Website Template — Step-by-Step Customization Guide
+================================================================================
+
+नमस्ते! 🙏
+
+यह गाइड आपको सिखाएगी कि कैसे इस टेम्पलेट से किसी भी डॉक्टर की प्रोफेशनल
+वेबसाइट तैयार की जाए। इसमें सब कुछ step-by-step समझाया गया है।
+
+================================================================================
+विषय सूची (Table of Contents)
+================================================================================
+1.  जरूरी चीजें (Things You Need)
+2.  डॉक्टर डिटेल फॉर्म भरना (Filling the Doctor Details Form)
+3.  फोटो तैयार करना (Preparing Photos)
+4.  वेबसाइट फाइलों को समझना (Understanding Website Files)
+5.  प्लेसहोल्डर क्या हैं और कैसे बदलें (Placeholders & How to Replace)
+6.  index.html में बदलाव करना (Customizing index.html)
+7.  script.js में बदलाव करना (Customizing script.js)
+8.  दूसरी फाइलों में बदलाव (Customizing Other Files)
+9.  SEO सेटिंग्स (SEO Settings)
+10. कलर बदलना (Changing Colors)
+11. वेबसाइट टेस्ट करना (Testing the Website)
+12. वेबसाइट इंटरनेट पर डालना (Publishing the Website)
+13. फ्री में होस्ट करना — GitHub Pages (Free Hosting on GitHub Pages)
+14. Google पर दिखाना (Getting Listed on Google)
+15. आम समस्याएं और समाधान (Common Problems & Solutions)
+
+================================================================================
+1. जरूरी चीजें (Things You Need)
+================================================================================
+
+आपको बस ये चीजें चाहिए:
+
+✅ एक कंप्यूटर/लैपटॉप (Windows/Mac/Linux)
+✅ Notepad या कोई भी text editor (Notepad, VS Code, Sublime Text)
+✅ डॉक्टर की पूरी जानकारी (DOCTOR_DETAILS_FORM_HINDI.txt से भरी हुई)
+✅ डॉक्टर की फोटोज (कम से कम 3-4 अच्छी फोटो)
+✅ क्लिनिक की फोटोज (4-5 फोटो)
+✅ इंटरनेट कनेक्शन (वेबसाइट publish करने के लिए)
+✅ एक Gmail अकाउंट (GitHub पर signup के लिए)
+
+कोई भी कोडिंग जानने की जरूरत नहीं है! बस कॉपी-पेस्ट करना आना चाहिए।
+
+================================================================================
+2. डॉक्टर डिटेल फॉर्म भरना (Filling the Doctor Details Form)
+================================================================================
+
+सबसे पहले, DOCTOR_DETAILS_FORM_HINDI.txt फाइल को खोलें और उसे पूरा भरें।
+
+यह फॉर्म डॉक्टर को खुद भरना है — इसमें उनकी सारी जानकारी आ जाएगी:
+- नाम
+- डिग्री
+- क्लिनिक का पता
+- फोन नंबर
+- स्पेशलिटी
+- और बाकी सब कुछ
+
+टिप: यह फॉर्म आप डॉक्टर को WhatsApp पर भेज सकते हैं, वो खुद भर देंगे।
+
+================================================================================
+3. फोटो तैयार करना (Preparing Photos)
+================================================================================
+
+वेबसाइट में ये फोटोज लगेंगी (सभी .jpg फॉर्मेट में होनी चाहिए):
+
+📸 hero.jpg      — मेन फोटो (हेडशॉट, सफेद कोट में, सामने से)
+                   साइज: 800x1000 pixels लगभग
+                   
+📸 doctor2.jpg   — दूसरी फोटो (थोड़ी अलग पोज़ में)
+                   साइज: 800x1000 pixels लगभग
+
+📸 doctor3.jpg   — तीसरी फोटो
+                   साइज: 800x1000 pixels लगभग
+
+📸 clinic1.jpg   — OPD/Consultation Desk
+📸 clinic2.jpg   — ECG/Equipment Room
+📸 clinic3.jpg   — Reception/Waiting Area
+📸 clinic4.jpg   — कोई और clinic facility
+📸 clinic5.jpg   — Clinic की बाहर से फोटो
+
+📸 og-image.jpg  — Social Media (WhatsApp/Facebook) पर शेयर करने पर दिखेगी
+                   साइज: 1200x630 pixels
+
+सभी फोटोज को इसी फोल्डर में डालें (जहाँ index.html है)।
+
+ध्यान रखें:
+- फोटो का नाम बिल्कुल वही रखें जो ऊपर लिखा है
+- फोटो clear और professional quality की हो
+- फोटो का बैकग्राउंड साफ-सुथरा हो
+- फोटो बहुत बड़ी (2MB से ज्यादा) न हो
+
+================================================================================
+4. वेबसाइट फाइलों को समझना (Understanding Website Files)
+================================================================================
+
+ये सभी files हैं जो आपको मिलेंगी:
+
+📄 index.html      — यह मेन वेबसाइट फाइल है। सबसे जरूरी।
+                     इसमें ही सारी जानकारी बदलनी है।
+
+📄 style.css       — वेबसाइट का डिज़ाइन (रंग, साइज, लेआउट)
+                     इसमें ज्यादा बदलाव की जरूरत नहीं।
+                     सिर्फ कलर बदलना हो तो यहाँ करें।
+
+📄 script.js       — वेबसाइट के फंक्शन (BMI Calculator, Chatbot, etc.)
+                     इसमें डॉक्टर का नाम और नंबर बदलना है।
+
+📄 manifest.json   — मोबाइल ऐप जैसा बनाने के लिए
+                     इसमें सिर्फ नाम बदलें।
+
+📄 robots.txt      — Google को बताता है क्या index करना है
+                     सिर्फ URL बदलें।
+
+📄 sitemap.xml     — Google को सारे पेजेस की लिस्ट
+                     सिर्फ URL बदलें।
+
+📄 sw.js           — Service Worker (cache management)
+                     इसमें कुछ नहीं बदलना।
+
+📁 blogs/          — ब्लॉग पेज का फोल्डर
+   └ index.html   — इसमें भी क्लिनिक का नाम बदलें।
+
+📁 images/         — फोटोज रखने का फोल्डर (आपकी सभी फोटो यहाँ रखें)
+
+================================================================================
+5. प्लेसहोल्डर क्या हैं और कैसे बदलें (Placeholders & How to Replace)
+================================================================================
+
+इस टेम्पलेट में डॉ. गिल की सारी जानकारी की जगह {{PLACEHOLDER}} लगाए गए हैं।
+आपको हर {{PLACEHOLDER}} को डॉक्टर की असली जानकारी से बदलना है।
+
+उदाहरण:
+❌ पुराना:  {{CLINIC_NAME}}
+✅ नया:    Sharma Heart Clinic
+
+❌ पुराना:  {{DOCTOR_FULL_NAME}}
+✅ नया:    Dr. Rajesh Sharma
+
+सबसे आसान तरीका — Find and Replace का use करें:
+
+📌 METHOD 1: Notepad में Find & Replace
+   1. index.html को Notepad में खोलें
+   2. Ctrl+H दबाएं (Find and Replace)
+   3. "Find what" में प्लेसहोल्डर डालें (जैसे: {{CLINIC_NAME}})
+   4. "Replace with" में असली जानकारी डालें (जैसे: Sharma Heart Clinic)
+   5. "Replace All" पर क्लिक करें
+   6. हर एक प्लेसहोल्डर के लिए ऐसा करें
+
+📌 METHOD 2: Visual Studio Code (FREE, ज्यादा आसान)
+   1. https://code.visualstudio.com से Download करें
+   2. index.html खोलें
+   3. Ctrl+H दबाएं
+   4. एक साथ सारे प्लेसहोल्डर find & replace कर सकते हैं
+
+================================================================================
+6. index.html में बदलाव करना (Customizing index.html) — सबसे जरूरी!
+================================================================================
+
+यहाँ सारे प्लेसहोल्डर की लिस्ट है जो आपको बदलने हैं।
+हर एक को Ctrl+H से find करें और replace करें:
+
+==================== डॉक्टर का नाम ====================
+{{DOCTOR_FULL_NAME_WITH_SHORT}}     → Dr. Rajesh Sharma (Dr. R S Sharma)
+{{DOCTOR_FULL_NAME}}                → Dr Rajesh Sharma
+{{DOCTOR_FULL_NAME_DOT}}            → Dr. Rajesh Sharma
+{{DOCTOR_SHORT_NAME}}               → Dr R S Sharma
+{{DOCTOR_SHORT_NAME_SPACE}}         → Dr R S Sharma
+{{DOCTOR_SHORT_NAME_DOT}}           → Dr. R S Sharma
+{{DOCTOR_SHORT_NAME_DOT_SPACE}}     → Dr. R S Sharma
+{{DOCTOR_NAME_NO_TITLE}}            → Rajesh Sharma
+{{DOCTOR_LAST_NAME}}                → Sharma
+{{DOCTOR_LAST_NAME_DOT}}            → Dr. Sharma
+{{DOCTOR_LAST_NAME_LOWER}}          → sharma
+
+==================== क्लिनिक का नाम ====================
+{{CLINIC_NAME}}                     → Sharma Heart Clinic
+{{CLINIC_SHORT_NAME}}               → Sharma Heart
+{{CLINIC_NAME_URL_ENCODED}}         → Sharma%20Heart%20Clinic
+                                     (URL के लिए - space की जगह %20)
+
+==================== फोन नंबर ====================
+{{DOCTOR_PHONE}}                    → 9876543210
+{{DOCTOR_PHONE_WITH_SPACE}}         → +91 9876543210
+{{DOCTOR_PHONE_INTERNATIONAL}}      → +91-9876543210
+{{DOCTOR_WHATSAPP_NUMBER}}          → 919876543210
+
+==================== ईमेल ====================
+{{DOCTOR_EMAIL}}                    → drsharma@gmail.com
+
+==================== पता ====================
+{{CLINIC_FULL_ADDRESS}}             → Ganga Nagar, Meerut 250001
+{{CLINIC_STREET}}                   → Ganga Nagar
+{{CLINIC_STREET_CITY}}              → Ganga Nagar, Meerut
+{{CLINIC_STREET_SHORT}}             → Ganga Nagar
+{{CLINIC_AREA}}                     → Ganga Nagar
+{{CLINIC_CITY}}                     → Meerut
+{{CLINIC_CITY_PIN}}                 → Meerut 250001
+{{CLINIC_PINCODE}}                  → 250001
+{{CLINIC_STATE}}                    → Uttar Pradesh
+{{CLINIC_LANDMARK}}                 → Near City Hospital
+{{CLINIC_NEARBY_STATION}}           → Meerut Railway Station
+{{CLINIC_HIGHWAY}}                  → NH-58
+{{CLINIC_HIGHWAY_FULL}}             → NH-58 Highway
+
+==================== GPS Coordinates ====================
+{{CLINIC_LAT}}                      → 28.981
+{{CLINIC_LNG}}                      → 77.701
+
+==================== Google Links ====================
+{{GOOGLE_PLACE_ID}}                 → (Google Business Profile से मिलेगा)
+{{GOOGLE_MAPS_QUERY}}               → Ganga+Nagar+Meerut
+{{GOOGLE_MAPS_LINK}}                → (Google Maps से share link कॉपी करें)
+
+==================== स्पेशलिटी/टाइटल ====================
+{{DOCTOR_SPECIALTY_TITLE}}          → Heart Specialist & Physician
+{{DOCTOR_SHORT_SPECIALTY}}          → Heart Specialist
+{{DOCTOR_SHORT_SPECIALTY_2}}        → Cardiac Physician
+{{DOCTOR_TITLE_WITH_AI}}            → Heart Specialist | (अगर कोई AI वगैरह नहीं है तो छोड़ दें)
+
+==================== एजुकेशन/डिग्री ====================
+{{DOCTOR_MBBS}}                     → MBBS — GS Medical College
+{{DOCTOR_MBBS_COLLEGE_SHORT}}       → GSMC
+{{DOCTOR_DIPLOMA}}                  → MD Medicine — AIIMS Delhi
+{{DOCTOR_DIPLOMA_TITLE}}            → MD in Medicine
+{{DOCTOR_DIPLOMA_FULL}}             → MD Medicine, AIIMS, New Delhi
+{{DOCTOR_DIPLOMA_INSTITUTE}}        → AIIMS
+{{DOCTOR_DIPLOMA_SHORT}}            → AIIMS Delhi
+{{DOCTOR_DIPLOMA_ABBREV}}           → AIIMS
+{{DOCTOR_AI_INSTITUTE}}             → AIIMS
+{{DOCTOR_AI_CERT}}                  → Advanced Training — AIIMS
+{{DOCTOR_PGDCCP}}                   → MD — Medicine
+{{DOCTOR_PGDCCP_FULL}}              → Doctor of Medicine
+{{DOCTOR_EDUCATION_SHORT}}          → MBBS (GSMC), MD (AIIMS)
+{{DOCTOR_CERTS_BADGE}}              → MBBS • MD Medicine (AIIMS)
+{{DOCTOR_CERTS_SHORT}}              → MBBS, MD Medicine
+
+==================== अनुभव/स्टैट्स ====================
+{{DOCTOR_EXPERIENCE_YEARS}}         → 10+ Years
+{{DOCTOR_EXPERIENCE_SHORT}}         → 10+
+{{DOCTOR_EXPERIENCE_ALT}}           → 8+
+{{STAT_PATIENTS}}                   → 30000
+{{STAT_PATIENTS_FORMATTED}}         → 30,000+
+{{STAT_ECGS}}                       → 15000
+{{STAT_ECGS_FORMATTED}}             → 15,000+
+{{STAT_CONSULTATIONS}}              → 8000
+{{STAT_CONSULTATIONS_FORMATTED}}    → 8,000+
+
+==================== अस्पताल/कंसल्टेशन ====================
+{{DOCTOR_HOSPITAL_1}}               → City Super Speciality Hospital
+{{DOCTOR_HOSPITAL_1_SHORT}}         → City Hospital
+{{DOCTOR_HOSPITAL_1_FULL}}          → City Super Speciality Hospital, Meerut
+{{DOCTOR_HOSPITAL_ROLE}}            → Senior Consultant
+{{DOCTOR_SINCE_YEAR}}               → Since 2018
+{{DOCTOR_SINCE_YEAR_ALT}}           → since 2018
+{{DOCTOR_CERT_YEAR}}                → (2024)
+{{DOCTOR_COMPANY}}                  → Sharma Healthcare (या खाली छोड़ें)
+
+==================== आसपास के शहर (SEO) ====================
+{{CITY_MODINAGAR}}                  → Modinagar
+{{CITY_GOVINDPURI}}                 → Govindpuri
+{{CITY_HAPUR}}                      → Hapur
+{{CITY_BAGHPAT}}                    → Baghpat
+{{CITY_MURADNAGAR}}                 → Muradnagar
+{{CITY_SARDHANA}}                   → Sardhana
+{{CITY_PARTAPUR}}                   → Partapur
+{{CITY_KANKERKHERA}}                → Kankerkhera
+{{CITY_KHATAULI}}                   → Khatauli
+{{CITY_GHAZIABAD}}                  → Ghaziabad
+
+(अगर आपके एरिया के शहर अलग हैं, तो इन्हें बदल दें या नए डाल दें)
+
+==================== रीजन ====================
+{{REGION_DELHI_NCR}}                → Delhi NCR
+{{REGION_WEST_UP}}                  → Western Uttar Pradesh
+
+(अपने हिसाब से बदलें)
+
+==================== URLs ====================
+{{DOCTOR_GITHUB_URL}}               → drsharma-web.github.io/sharma-heart-clinic/
+{{DOCTOR_GITHUB_URL_SHORT}}         → drsharma-web.github.io/sharma-heart-clinic
+{{DOCTOR_GITHUB_URL_ENCODED}}       → drsharma-web.github.io%2Fsharma-heart-clinic
+                                     (URL encoded version)
+{{DOCTOR_DOMAIN}}                   → sharmaheartclinic.com
+                                     (अगर आपकी खुद की domain नहीं है तो GitHub URL ही use करें)
+{{DOCTOR_BLOG_URL}}                 → sharmaheartclinic.blogspot.com (या खाली छोड़ें)
+{{EKA_CARE_PROFILE}}                → (अगर है तो, नहीं तो खाली)
+{{EKA_CARE_PROFILE_SHORT}}          → (अगर है तो, नहीं तो खाली)
+
+==================== वेरिफिकेशन ====================
+{{GOOGLE_VERIFICATION_CODE}}        → (Google Search Console से मिलेगा)
+{{GOOGLE_VERIFICATION_FILE}}        → (Google Search Console से मिलेगा)
+{{GOOGLE_VERIFICATION_FILE_2}}      → (दूसरा verification, अगर है)
+{{BING_VERIFICATION}}               → (Bing Webmaster से मिलेगा)
+
+==================== दूसरी चीजें ====================
+{{CURRENT_YEAR}}                    → 2026
+{{STORAGE_PREFIX}}                  → sharma (doctor के last name का lowercase)
+{{CLINIC_SLUG}}                     → /sharma-heart-clinic/
+{{SEO_KEYWORDS}}                    → heart doctor meerut, dr sharma heart specialist, ...
+                                     (DOCTOR_DETAILS_FORM से keywords लेकर comma से लिखें)
+
+==================== इमेज के नाम ====================
+{{HERO_IMAGE}}                      → hero.jpg
+{{DOCTOR_IMAGE}}                    → doctor.jpg
+{{DOCTOR_IMAGE_2}}                  → doctor2.jpg
+{{DOCTOR_IMAGE_3}}                  → doctor3.jpg
+{{CLINIC_IMAGE_1}}                  → clinic1.jpg
+{{CLINIC_IMAGE_2}}                  → clinic2.jpg
+{{CLINIC_IMAGE_3}}                  → clinic3.jpg
+{{CLINIC_IMAGE_4}}                  → clinic4.jpg
+{{CLINIC_IMAGE_5}}                  → clinic5.jpg
+{{OG_IMAGE}}                        → og-image.jpg
+
+(ये आमतौर पर बदलने की जरूरत नहीं, सिवाय अगर आपने फोटो का नाम अलग रखा है)
+
+==================== इमेज ALT टेक्स्ट ====================
+{{DOCTOR_IMAGE_ALT}}                → Dr Rajesh Sharma – Heart Specialist
+{{DOCTOR_IMAGE_ALT_2}}              → Dr R S Sharma – Heart Physician
+{{DOCTOR_IMAGE_ALT_3}}              → Dr Rajesh Sharma
+{{CLINIC_IMAGE_ALT}}                → Sharma Heart Clinic
+
+(SEO के लिए जरूरी — डॉक्टर के नाम और स्पेशलिटी के साथ)
+
+================================================================================
+7. script.js में बदलाव करना (Customizing script.js)
+================================================================================
+
+script.js में ये बदलाव करें (Ctrl+H से):
+
+{{DOCTOR_FULL_NAME}}                → Dr Rajesh Sharma
+{{DOCTOR_LAST_NAME}}                → Sharma
+{{DOCTOR_LAST_NAME_LOWER}}          → sharma
+{{DOCTOR_SHORT_NAME_SPACE}}         → Dr R S Sharma
+{{CLINIC_NAME}}                     → Sharma Heart Clinic
+{{CLINIC_CITY}}                     → Meerut
+{{CLINIC_FULL_ADDRESS}}             → Ganga Nagar, Meerut 250001
+{{DOCTOR_PHONE}}                    → 9876543210
+{{DOCTOR_PHONE_WITH_SPACE}}         → +91 9876543210
+{{DOCTOR_WHATSAPP_NUMBER}}          → 919876543210
+{{STORAGE_PREFIX}}                  → sharma
+
+script.js में chatbot replies भी हैं - वो अपने आप placeholder से बदल जाएंगे।
+
+================================================================================
+8. दूसरी फाइलों में बदलाव (Customizing Other Files)
+================================================================================
+
+📄 manifest.json में बदलें:
+   {{CLINIC_NAME}}       → Sharma Heart Clinic
+   {{CLINIC_SHORT_NAME}} → Sharma Heart
+   {{CLINIC_SLUG}}       → /sharma-heart-clinic/
+
+📄 robots.txt में बदलें:
+   {{DOCTOR_GITHUB_URL}} → drsharma-web.github.io/sharma-heart-clinic/
+
+📄 sitemap.xml में बदलें:
+   {{DOCTOR_GITHUB_URL}} → drsharma-web.github.io/sharma-heart-clinic/
+
+📁 blogs/index.html में भी वही सब प्लेसहोल्डर बदलें जो index.html में बदले थे।
+
+================================================================================
+9. SEO सेटिंग्स (SEO Settings)
+================================================================================
+
+SEO = Search Engine Optimization (Google में ऊपर दिखने के लिए)
+
+index.html के <head> सेक्शन में (लाइन 30-35):
+
+✅ Title Tag (लाइन 30):
+   <title>{{CLINIC_NAME}} | {{DOCTOR_FULL_NAME}} — {{DOCTOR_SHORT_SPECIALTY}}</title>
+   →
+   <title>Sharma Heart Clinic | Dr. Rajesh Sharma — Heart Specialist in Meerut</title>
+
+✅ Meta Description (लाइन 33):
+   <meta name="description" content="...">
+   — यहाँ क्लिनिक और डॉक्टर के बारे में 2-3 लाइन डालें
+
+✅ Meta Keywords (लाइन 34):
+   <meta name="keywords" content="{{SEO_KEYWORDS}}">
+   — जगह-जगह के नाम और स्पेशलिटी comma से लिखें
+
+✅ h1 Tag (लाइन 3541):
+   <h1>Heart Doctor & Cardio-Physician in Meerut — Dr. Rajesh Sharma | Sharma Heart Clinic</h1>
+   — इसमें डॉक्टर का टाइटल, नाम, शहर और क्लिनिक का नाम होना चाहिए
+
+================================================================================
+10. कलर बदलना (Changing Colors)
+================================================================================
+
+वेबसाइट का main color red (#d90429) है। अगर आप बदलना चाहते हैं:
+
+style.css में line 6-7 पर:
+
+:root {
+  --primary: #d90429;       ← यह बदलें (जैसे: #0b5ed7 for blue)
+  --primary-dark: #b50020;  ← यह भी उसी के हिसाब से
+  ...
+}
+
+आम कलर कोड:
+🔴 Red:    #d90429
+🔵 Blue:   #0b5ed7
+🟢 Green:  #16a34a
+🟣 Purple: #7c3aed
+🟠 Orange: #ea580c
+
+प्रो टिप: style.css खोलें, Ctrl+H दबाएं,
+"Find: #d90429" और "Replace: आपका नया कलर"
+
+index.html (inline styles) में भी कलर #d90429 को बदलें!
+
+================================================================================
+11. वेबसाइट टेस्ट करना (Testing the Website)
+================================================================================
+
+सारे बदलाव करने के बाद, वेबसाइट को टेस्ट करें:
+
+1. index.html पर double-click करें
+   → आपके ब्राउज़र (Chrome/Firefox) में वेबसाइट खुल जाएगी
+
+2. ये चीजें जरूर चेक करें:
+   ✅ क्लिनिक का नाम सही दिख रहा है?
+   ✅ डॉक्टर का नाम और फोटो सही है?
+   ✅ फोन नंबर क्लिक करने पर कॉल जाती है?
+   ✅ WhatsApp बटन काम कर रहा है?
+   ✅ सारी फोटोज दिख रही हैं?
+   ✅ Google Map सही जगह दिखा रहा है?
+   ✅ BMI Calculator काम कर रहा है?
+   ✅ Chatbot सही जवाब दे रहा है?
+   ✅ मोबाइल में भी सही दिख रहा है? (Ctrl+Shift+I दबाएं, फिर mobile view)
+
+3. अगर कुछ गलत दिखे तो index.html में जाकर ठीक करें।
+
+================================================================================
+12. वेबसाइट इंटरनेट पर डालना (Publishing the Website)
+================================================================================
+
+वेबसाइट को दुनिया को दिखाने के 3 तरीके:
+
+🔷 OPTION A: GitHub Pages (FREE - सबसे आसान) → सेक्शन 13 में डिटेल
+
+🔷 OPTION B: Paid Hosting (~₹3000-5000/साल)
+   - Hostinger, GoDaddy, Bluehost जैसी कंपनियों से
+   - आपको अपनी domain मिल जाएगी (जैसे drsharma.com)
+   - सारी files FTP से upload करनी होती हैं
+
+🔷 OPTION C: Netlify / Vercel (FREE)
+   - GitHub से connect करके automatic deploy
+
+================================================================================
+13. फ्री में होस्ट करना — GitHub Pages
+================================================================================
+
+सबसे आसान और पूरी तरह FREE! 🎉
+
+STEP 1: GitHub अकाउंट बनाएं
+   1. https://github.com पर जाएं
+   2. "Sign Up" करें (Gmail से आसानी से बन जाएगा)
+   3. Username चुनें (जैसे: drsharma-web)
+
+STEP 2: New Repository बनाएं
+   1. Login करने के बाद "+" button → "New repository"
+   2. Repository name: sharma-heart-clinic (या जो भी नाम रखना चाहें)
+   3. "Public" चुनें
+   4. "Create repository" पर क्लिक करें
+
+STEP 3: Files Upload करें
+   1. "uploading an existing file" लिंक पर क्लिक करें
+   2. अपने कंप्यूटर से सारी files drag & drop करें:
+      - index.html
+      - style.css
+      - script.js
+      - manifest.json
+      - robots.txt
+      - sitemap.xml
+      - sw.js
+      - सभी .jpg फोटोज
+      - blogs/ फोल्डर
+   3. "Commit changes" पर क्लिक करें
+
+STEP 4: GitHub Pages Enable करें
+   1. Repository → "Settings" tab पर जाएं
+   2. Left sidebar में "Pages" पर क्लिक करें
+   3. "Branch" dropdown में "main" चुनें
+   4. "Save" पर क्लिक करें
+   5. 1-2 मिनट रुकें, फिर refresh करें
+   6. आपको एक URL मिलेगा:
+      https://drsharma-web.github.io/sharma-heart-clinic/
+
+STEP 5: URL चेक करें
+   - इस URL को खोलकर देखें — आपकी वेबसाइट live है! 🎉
+
+अब यह URL आप किसी को भी WhatsApp/Message करके भेज सकते हैं।
+
+================================================================================
+14. Google पर दिखाना (Getting Listed on Google)
+================================================================================
+
+1. Google Search Console (FREE):
+   - https://search.google.com/search-console पर जाएं
+   - अपनी वेबसाइट का URL add करें
+   - Verification करें (HTML file upload method)
+
+2. Sitemap Submit करें:
+   - Search Console में "Sitemaps" पर जाएं
+   - sitemap.xml का URL डालें और Submit करें
+
+3. Google Business Profile (पहले Google My Business):
+   - https://business.google.com पर जाएं
+   - अपनी क्लिनिक को register करें
+   - Address, photos, phone number डालें
+   - इससे Google Maps पर भी क्लिनिक दिखेगी
+
+4. Google में आने में 1-4 हफ्ते लग सकते हैं — patience रखें।
+
+================================================================================
+15. आम समस्याएं और समाधान (Common Problems & Solutions)
+================================================================================
+
+❌ PROBLEM: फोटो नहीं दिख रही
+✅ SOLUTION: चेक करें कि फोटो का नाम बिल्कुल सही है (hero.jpg, clinic1.jpg वगैरह)
+             और फोटो उसी folder में है जहाँ index.html है।
+
+❌ PROBLEM: मोबाइल में वेबसाइट टूटी हुई दिख रही है
+✅ SOLUTION: यह responsive design है, ज्यादातर मोबाइल में सही दिखेगी।
+             अगर कोई problem है तो style.css में जाकर mobile styles check करें।
+
+❌ PROBLEM: WhatsApp बटन काम नहीं कर रहा
+✅ SOLUTION: script.js में WhatsApp नंबर सही से बदला है क्या?
+             नंबर में +91 नहीं, सिर्फ 91 लिखें (919876543210)
+
+❌ PROBLEM: Google Map गलत जगह दिखा रहा है
+✅ SOLUTION: index.html में map iframe का src बदलें।
+             Google Maps खोलें → अपनी clinic ढूंढें → Share → Embed a map →
+             URL कॉपी करें → index.html में iframe src में paste करें।
+
+❌ PROBLEM: प्लेसहोल्डर ({{...}}) दिख रहे हैं
+✅ SOLUTION: आप वो प्लेसहोल्डर replace करना भूल गए हैं।
+             Ctrl+F से उस प्लेसहोल्डर को ढूंढें और असली जानकारी से बदलें।
+
+❌ PROBLEM: Chatbot में पुराना नाम दिख रहा है
+✅ SOLUTION: script.js और index.html (inline JS) दोनों जगह चेक करें।
+             दोनों में chatbot replies हैं — दोनों जगह बदलें।
+
+❌ PROBLEM: वेबसाइट बहुत धीमी लोड हो रही है
+✅ SOLUTION: फोटोज का size कम करें (1MB से कम रखें)।
+             https://tinypng.com पर जाकर compress करें।
+
+================================================================================
+बोनस टिप्स (Bonus Tips)
+================================================================================
+
+💡 वेबसाइट के फोटो हर 6 महीने में अपडेट करते रहें।
+
+💡 अपनी वेबसाइट का लिंक हर जगह डालें:
+   - WhatsApp DP/Status में
+   - Instagram Bio में
+   - Google Business Profile में
+   - Visiting Card में
+   - Prescription Pad पर
+
+💡 मरीजों से Google Review लिखवाएं — इससे Ranking improve होगी।
+
+💡 Blog Section को update करते रहें — Google को fresh content पसंद है।
+
+💡 हर महीने website को mobile में check करें — सब सही काम कर रहा है ना।
+
+💡 Emergency Banner, Timings, Phone Number हमेशा updated रखें।
+
+================================================================================
+                    >>> गाइड समाप्त / END OF GUIDE <<<
+================================================================================
+
+किसी भी समस्या के लिए वेबसाइट डेवलपर से संपर्क करें।
+
+Good luck! आपकी वेबसाइट बहुत जल्द तैयार हो जाएगी। 🚀
+
+================================================================================

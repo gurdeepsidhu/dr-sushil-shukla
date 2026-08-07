@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>
+    (function() {
+      var key = 'shukla_v11_cache_purged';
+      if (!localStorage.getItem(key)) {
+        localStorage.setItem(key, 'true');
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(regs) {
+            for (var i = 0; i < regs.length; i++) regs[i].unregister();
+          });
+        }
+        if ('caches' in window) {
+          caches.keys().then(function(names) {
+            for (var i = 0; i < names.length; i++) caches.delete(names[i]);
+          });
+        }
+        window.location.reload(true);
+      }
+    })();
+  </script>
+  <title>Blog & Patient Education | Dr. Sushil Shukla</title>
+  <meta name="description" content="Heart health articles, congenital heart FAQs, and interactive health calculators (BMI, BSA, Ideal Weight).">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d90429">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Yatharth Hospital">
+  
+  <!-- Link to External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-heart"><i class="fas fa-heart"></i></div>
+      <div class="preloader-text">Yatharth Super Speciality Hospital</div>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- EMERGENCY BANNER -->
+  <div class="emergency-banner">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <span class="emergency-text">
+        <i class="fas fa-exclamation-triangle"></i> <strong>Pediatric Cardiac Care:</strong> Yatharth Super Speciality Hospital, Noida, Delhi NCR
+      </span>
+      <a href="tel:95601461999" class="emergency-phone">
+        <i class="fas fa-phone-alt"></i> +91 95601 461999
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="logo navbar-brand" href="index.html">
+        <i class="fas fa-heartbeat"></i> Yatharth Hospital
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Dr. Shukla
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">Profile & Philosophy</a></li>
+              <li><a class="dropdown-item" href="qualifications.html">Qualifications & Timeline</a></li>
+              <li><a class="dropdown-item" href="academic.html">Academic & Achievements</a></li>
+            </ul>
+          </li>
+          
+          <!-- Clinical Specialties Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="specialtiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Specialties
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="specialtiesDropdown">
+              <li><a class="dropdown-item" href="pediatric-cardiology.html">Pediatric Cardiology</a></li>
+              <li><a class="dropdown-item" href="interventional-cardiology.html">Interventional Cardiology</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a class="nav-link" href="expertise.html">Conditions Treated</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog & Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Book Appointment</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HEADER BANNER -->
+  <section class="section-padding bg-primary text-white text-center" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
+    <div class="container py-4">
+      <h1 class="display-5 fw-bold">Blog & Patient Education</h1>
+      <p class="lead">Heart Health Awareness, FAQs, & Interactive Health Tools</p>
+    </div>
+  </section>
+
+  <!-- CONGENITAL AWARENESS BLOG ARTICLE -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto" data-aos="fade-up">
+          <div class="p-4 bg-light rounded shadow-sm border mb-5">
+            <span class="badge bg-primary mb-2">Education</span>
+            <h2>Understanding Congenital Heart Defects in Newborns</h2>
+            <p class="text-muted small">Written by Dr. Sushil Shukla &bull; Yatharth Super Speciality Hospital</p>
+            <p>Congenital Heart Defects (CHD) are structural heart issues present at birth. They can range from simple "holes in the heart" (like Atrial Septal Defects or Patent Ductus Arteriosus) to complex structural anomalies that restrict blood flow to the lungs or body.</p>
+            <p>Early identification through <strong>fetal echocardiography</strong> during pregnancy or clinical evaluation immediately after birth is vital. Today, advanced transcatheter interventions allow us to close defects like ASDs and PDAs using custom closing devices threaded through blood vessels, completely avoiding the need for open-heart surgery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQS ACCORDION -->
+  <section class="section-padding pt-0">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">FAQ</span>
+        <h2 class="heading">Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto" data-aos="fade-up">
+          <div class="accordion" id="faqAccordion">
+            
+            <div class="accordion-item mb-3 border rounded shadow-sm">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  What is a Pediatric Cardiologist?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  A pediatric cardiologist diagnoses and treats heart problems in babies, infants, children, and teens. This includes structural heart defects (Congenital Heart Disease), electrical rhythm problems, and cardiovascular issues associated with other systemic diseases.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3 border rounded shadow-sm">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is a Cardiac Catheterization?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Cardiac catheterization is a minimally invasive, non-surgical procedure in which thin, flexible tubes (catheters) are guided through blood vessels into the heart. It is used to get detailed structural diagnostics and perform interventions (like closing heart holes with devices, stenting, or opening narrowed valves with balloons).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3 border rounded shadow-sm">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Are device closures for ASD or VSD permanent and safe?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Yes, device closures (such as for ASD, VSD, and PDA) are highly effective, permanent, and have a proven safety record. Once placed, the body's natural tissue grows over the device to permanently seal the defect. This avoids open-heart surgery, has short recovery times, and lets children return to normal life within days.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATORS CONTAINER -->
+  <section class="section-padding bg-light" id="patients-corner">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Interactive Tools</span>
+        <h2 class="heading">Health Calculators</h2>
+        <p class="section-sub">Calculate BMI, Body Surface Area (BSA), or evaluate cardiovascular risk parameters.</p>
+      </div>
+        <section id="bmi" class="bmi-calculator section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-calculator"></i> Health Tool</span>
+        <h2 class="heading">BMI Calculator</h2>
+        <p class="section-sub">Check your Body Mass Index — Know if your weight is in healthy range.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="bmi-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="row g-4 align-items-center">
+              <div class="col-md-6">
+                <div class="bmi-inputs">
+                  <div class="bmi-field">
+                    <label><i class="fas fa-weight"></i> Weight (kg)</label>
+                    <input type="number" id="weight" class="bmi-input" placeholder="e.g. 70" min="20" max="300" step="0.1">
+                  </div>
+                  <div class="bmi-field">
+                    <label><i class="fas fa-ruler-vertical"></i> Height (cm)</label>
+                    <input type="number" id="height" class="bmi-input" placeholder="e.g. 175" min="50" max="250" step="0.1">
+                  </div>
+                  <button class="submit-btn" id="calcBmi">
+                    <i class="fas fa-calculator"></i> Calculate BMI
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bmi-result" id="bmiResult">
+                  <div class="bmi-result-placeholder">
+                    <i class="fas fa-heartbeat"></i>
+                    <p>Enter your details and click Calculate</p>
+                  </div>
+                  <div class="bmi-result-data" style="display:none;">
+                    <div class="bmi-score-wrap">
+                      <span class="bmi-label">Your BMI</span>
+                      <span class="bmi-score" id="bmiScore">0.0</span>
+                    </div>
+                    <div class="bmi-category" id="bmiCategory">Normal Weight</div>
+                    <div class="bmi-bar">
+                      <div class="bmi-bar-fill" id="bmiBarFill"></div>
+                    </div>
+                    <div class="bmi-ranges">
+                      <span>Underweight<br>< 18.5</span>
+                      <span>Normal<br>18.5–24.9</span>
+                      <span>Overweight<br>25–29.9</span>
+                      <span>Obese<br>> 30</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- HEART RISK CALCULATOR (Part 36)  -->
+  <!-- ================================ -->
+  <section id="heart-risk" class="heart-risk section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-heartbeat"></i> Health Tool</span>
+        <h2 class="heading">Heart Risk Calculator</h2>
+        <p class="section-sub">Check your 10-year risk of heart disease. Know your score, take control.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="risk-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="row g-4">
+              <div class="col-md-7">
+                <div class="risk-form">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-venus-mars"></i> Gender</label>
+                      <select id="riskGender" class="risk-input">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-birthday-cake"></i> Age</label>
+                      <input type="number" id="riskAge" class="risk-input" placeholder="30-74" min="30" max="74">
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-weight"></i> Weight (kg)</label>
+                      <input type="number" id="riskWeight" class="risk-input" placeholder="e.g. 70" min="20" max="300">
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-ruler-vertical"></i> Height (cm)</label>
+                      <input type="number" id="riskHeight" class="risk-input" placeholder="e.g. 170" min="50" max="250">
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-smoking"></i> Smoker?</label>
+                      <select id="riskSmoker" class="risk-input">
+                        <option value="no">Non-Smoker</option>
+                        <option value="yes">Smoker</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-tint"></i> Diabetic?</label>
+                      <select id="riskDiabetes" class="risk-input">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-heart"></i> Systolic BP</label>
+                      <input type="number" id="riskBP" class="risk-input" placeholder="120 mmHg" min="80" max="250">
+                    </div>
+                    <div class="col-6">
+                      <label class="risk-label"><i class="fas fa-oil-can"></i> Cholesterol (mg/dL)</label>
+                      <input type="number" id="riskChol" class="risk-input" placeholder="e.g. 200" min="50" max="500">
+                    </div>
+                  </div>
+                  <button class="submit-btn mt-3" id="calcRisk">
+                    <i class="fas fa-heartbeat"></i> Calculate My Risk
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="risk-result" id="riskResult">
+                  <div class="risk-placeholder">
+                    <i class="fas fa-heartbeat"></i>
+                    <p>Fill your details to see your 10-year heart risk score.</p>
+                  </div>
+                  <div class="risk-data" style="display:none;">
+                    <div class="risk-gauge">
+                      <div class="risk-gauge-circle" id="riskGauge">
+                        <span class="risk-percent" id="riskPercent">0%</span>
+                      </div>
+                    </div>
+                    <div class="risk-level" id="riskLevel">Low Risk</div>
+                    <div class="risk-bar">
+                      <div class="risk-bar-fill" id="riskBarFill"></div>
+                    </div>
+                    <div class="risk-bar-labels">
+                      <span>0%</span>
+                      <span style="color:#10b981;">Low</span>
+                      <span style="color:#f59e0b;">Mod</span>
+                      <span style="color:#ef4444;">High</span>
+                      <span>30%+</span>
+                    </div>
+                    <p class="risk-message" id="riskMessage">Your risk is low. Keep up the healthy lifestyle!</p>
+                    <p class="risk-disclaimer"><i class="fas fa-info-circle"></i> This is an estimate based on standard risk factors. Consult Dr Sushil Shukla for a complete assessment.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- ASCVD CALCULATOR (Part 37)       -->
+  <!-- ================================ -->
+  <section id="ascvd" class="tools-section section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-chart-line"></i> Health Tool</span>
+        <h2 class="heading">ASCVD Risk Calculator</h2>
+        <p class="section-sub">Atherosclerotic Cardiovascular Disease — 10-year risk assessment (Pooled Cohort Equations).</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="tools-card" data-aos="fade-up">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="tools-label"><i class="fas fa-venus-mars"></i> Gender</label>
+                <select id="ascvdGender" class="tools-input"><option value="male">Male</option><option value="female">Female</option></select>
+              </div>
+              <div class="col-md-4">
+                <label class="tools-label"><i class="fas fa-birthday-cake"></i> Age (40-79)</label>
+                <input type="number" id="ascvdAge" class="tools-input" placeholder="e.g. 55" min="40" max="79">
+              </div>
+              <div class="col-md-4">
+                <label class="tools-label"><i class="fas fa-users"></i> Race</label>
+                <select id="ascvdRace" class="tools-input"><option value="white">White / Other</option><option value="african">African American</option></select>
+              </div>
+              <div class="col-md-4">
+                <label class="tools-label"><i class="fas fa-oil-can"></i> Total Chol (mg/dL)</label>
+                <input type="number" id="ascvdChol" class="tools-input" placeholder="100-400" min="100" max="400">
+              </div>
+              <div class="col-md-4">
+                <label class="tools-label"><i class="fas fa-heart"></i> HDL Chol (mg/dL)</label>
+                <input type="number" id="ascvdHdl" class="tools-input" placeholder="20-100" min="20" max="100">
+              </div>
+              <div class="col-md-4">
+                <label class="tools-label"><i class="fas fa-heartbeat"></i> Systolic BP</label>
+                <input type="number" id="ascvdSbp" class="tools-input" placeholder="90-200" min="90" max="200">
+              </div>
+              <div class="col-md-3">
+                <label class="tools-label"><i class="fas fa-pills"></i> On BP Meds?</label>
+                <select id="ascvdBpMeds" class="tools-input"><option value="no">No</option><option value="yes">Yes</option></select>
+              </div>
+              <div class="col-md-3">
+                <label class="tools-label"><i class="fas fa-smoking"></i> Smoker?</label>
+                <select id="ascvdSmoker" class="tools-input"><option value="no">No</option><option value="yes">Yes</option></select>
+              </div>
+              <div class="col-md-3">
+                <label class="tools-label"><i class="fas fa-tint"></i> Diabetic?</label>
+                <select id="ascvdDiabetes" class="tools-input"><option value="no">No</option><option value="yes">Yes</option></select>
+              </div>
+              <div class="col-md-3 d-flex align-items-end">
+                <button class="submit-btn w-100" id="calcAscvd"><i class="fas fa-calculator"></i> Calculate</button>
+              </div>
+            </div>
+            <div class="tools-result" id="ascvdResult" style="display:none;">
+              <hr>
+              <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                  <div class="tools-score" id="ascvdScore">0%</div>
+                  <div class="tools-level" id="ascvdLevel">Low Risk</div>
+                </div>
+                <div class="col-md-8">
+                  <div class="tools-bar-track">
+                    <div class="tools-bar-fill" id="ascvdBar" style="width:0%"></div>
+                  </div>
+                  <div class="tools-bar-labels"><span>0%</span><span>5%</span><span>7.5%</span><span>15%</span><span>30%+</span></div>
+                  <p class="tools-msg" id="ascvdMsg">Your ASCVD risk assessment result.</p>
+                  <p class="tools-disc"><i class="fas fa-info-circle"></i> Based on ACC/AHA Pooled Cohort Equations. Consult Shukla for clinical evaluation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- BSA CALCULATOR (Part 38)         -->
+  <!-- ================================ -->
+  <section id="bsa" class="tools-section section-padding" style="background:var(--light);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-ruler-combined"></i> Health Tool</span>
+        <h2 class="heading">BSA Calculator</h2>
+        <p class="section-sub">Body Surface Area — Used for cardiac index, drug dosing, and medical assessments.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="tools-card text-center" data-aos="fade-up">
+            <div class="row g-3">
+              <div class="col-6">
+                <label class="tools-label"><i class="fas fa-weight"></i> Weight (kg)</label>
+                <input type="number" id="bsaWeight" class="tools-input" placeholder="e.g. 70" step="0.1">
+              </div>
+              <div class="col-6">
+                <label class="tools-label"><i class="fas fa-ruler-vertical"></i> Height (cm)</label>
+                <input type="number" id="bsaHeight" class="tools-input" placeholder="e.g. 175" step="0.1">
+              </div>
+            </div>
+            <button class="submit-btn mt-3" id="calcBsa"><i class="fas fa-calculator"></i> Calculate BSA</button>
+            <div class="tools-result" id="bsaResult" style="display:none;">
+              <hr>
+              <div class="bsa-score-wrap">
+                <span class="bsa-label">Your BSA</span>
+                <span class="bsa-score" id="bsaScore">0.00 m²</span>
+              </div>
+              <div class="row g-2 mt-3">
+                <div class="col-6"><div class="bsa-meta"><span>Mosteller Formula</span><small>√(Ht×Wt/3600)</small></div></div>
+                <div class="col-6"><div class="bsa-meta"><span>Du Bois Formula</span><small>0.007184 × W^0.425 × H^0.725</small></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- IDEAL WEIGHT CALCULATOR (Part 39)-->
+  <!-- ================================ -->
+  <section id="ideal-weight" class="tools-section section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-check-double"></i> Health Tool</span>
+        <h2 class="heading">Ideal Weight Calculator</h2>
+        <p class="section-sub">Find your ideal body weight range based on height, gender, and frame size.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="tools-card" data-aos="fade-up">
+            <div class="row g-3">
+              <div class="col-6">
+                <label class="tools-label"><i class="fas fa-venus-mars"></i> Gender</label>
+                <select id="idealGender" class="tools-input"><option value="male">Male</option><option value="female">Female</option></select>
+              </div>
+              <div class="col-6">
+                <label class="tools-label"><i class="fas fa-ruler-vertical"></i> Height (cm)</label>
+                <input type="number" id="idealHeight" class="tools-input" placeholder="e.g. 175" step="0.1">
+              </div>
+              <div class="col-6">
+                <label class="tools-label"><i class="fas fa-th-large"></i> Frame Size</label>
+                <select id="idealFrame" class="tools-input"><option value="small">Small</option><option value="medium" selected>Medium</option><option value="large">Large</option></select>
+              </div>
+              <div class="col-6 d-flex align-items-end">
+                <button class="submit-btn w-100" id="calcIdeal"><i class="fas fa-calculator"></i> Calculate</button>
+              </div>
+            </div>
+            <div class="tools-result" id="idealResult" style="display:none;">
+              <hr>
+              <div class="row text-center g-3">
+                <div class="col-4"><div class="ideal-box"><span class="ideal-label">Ideal Weight</span><span class="ideal-value" id="idealWeight">0 kg</span></div></div>
+                <div class="col-4"><div class="ideal-box"><span class="ideal-label">Healthy Range</span><span class="ideal-value" id="idealRange">0-0 kg</span></div></div>
+                <div class="col-4"><div class="ideal-box"><span class="ideal-label">Devine Formula</span><span class="ideal-value" id="idealDevine">0 kg</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- GOOGLE REVIEWS (Part 30)         -->
+  <!-- ================================ -->
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fas fa-heartbeat"></i> Yatharth Super Speciality Hospital
+          </div>
+          <p class="footer-desc">Providing ethical, affordable, and high-quality congenital and pediatric cardiac care to the community. Serving patients across Noida, Ghaziabad, Greater Noida, Gurgaon, Faridabad, Delhi NCR, and surrounding regions.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/9195601461999" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+          <a href="about.html"><i class="fas fa-chevron-right"></i> About Doctor</a>
+          <a href="pediatric-cardiology.html"><i class="fas fa-chevron-right"></i> Pediatric Cardiology</a>
+          <a href="interventional-cardiology.html"><i class="fas fa-chevron-right"></i> Interventional Cardiology</a>
+          <a href="blog.html"><i class="fas fa-chevron-right"></i> Blog & FAQs</a>
+          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact & Booking</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-phone"></i> +91 95601 461999</p>
+          <p><i class="fas fa-envelope"></i> nicedocsush@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Yatharth Hospital,<br>Noida, Delhi NCR</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p style="font-size:13px;opacity:.6;">
+            <i class="fas fa-search"></i> Find us on: &nbsp;
+            <a href="https://nicedocsush.github.io/dr-sushil-shukla/" style="color:white;">Yatharth Super Speciality Hospital</a> &nbsp;|&nbsp;
+            <a href="https://www.google.com/search?q=Yatharth%20Super%20Speciality%20Hospital+Noida" target="_blank" style="color:#4285F4;">Google Maps</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">© 2026 <strong>Yatharth Super Speciality Hospital</strong>. All Rights Reserved. Designed with <i class="fas fa-heart" style="color:#d90429;"></i></p>
+  </footer>
+
+  <!-- FLOATING WIDGETS -->
+  <div class="floating-contact">
+    <a href="tel:95601461999" class="floating-btn phone-btn" aria-label="Call Doctor"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/9195601461999?text=Hello%20Dr%20Sushil%20Shukla%20team%2C%20I%20want%20to%20book%20an%20appointment" class="floating-btn wa-btn" target="_blank" aria-label="WhatsApp Book"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- JS SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
