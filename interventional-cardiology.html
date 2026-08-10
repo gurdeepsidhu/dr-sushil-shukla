@@ -50,7 +50,7 @@
   <meta name="theme-color" content="#d90429">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Yatharth Hospital">
+  <meta name="apple-mobile-web-app-title" content="Dr. Sushil Shukla">
   
   <!-- Link to External Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -60,7 +60,7 @@
   <div id="preloader">
     <div class="preloader-content">
       <div class="preloader-heart"><i class="fas fa-heart"></i></div>
-      <div class="preloader-text">Yatharth Super Speciality Hospital</div>
+      <div class="preloader-text">Dr. Sushil Shukla</div>
       <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
     </div>
   </div>
@@ -69,7 +69,7 @@
   <div class="emergency-banner">
     <div class="container d-flex justify-content-between align-items-center flex-wrap">
       <span class="emergency-text">
-        <i class="fas fa-exclamation-triangle"></i> <strong>Pediatric Cardiac Care:</strong> Yatharth Super Speciality Hospital, Noida, Delhi NCR
+        <i class="fas fa-exclamation-triangle"></i> <strong>Pediatric Cardiac Care:</strong> Dr. Sushil Shukla, Noida, Delhi NCR
       </span>
       <a href="tel:95601461999" class="emergency-phone">
         <i class="fas fa-phone-alt"></i> +91 95601 461999
@@ -81,7 +81,7 @@
   <nav id="navbar" class="navbar navbar-expand-lg">
     <div class="container">
       <a class="logo navbar-brand" href="index.html">
-        <i class="fas fa-heartbeat"></i> Yatharth Hospital
+        <i class="fas fa-heartbeat"></i> Dr. Sushil Shukla
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
               aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,6 +114,7 @@
             </ul>
           </li>
           
+          <li class="nav-item"><a class="nav-link" href="patient-journey.html">Care Journey</a></li>
           <li class="nav-item"><a class="nav-link" href="expertise.html">Conditions Treated</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog & Tools</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Book Appointment</a></li>
@@ -142,6 +143,7 @@
           </div>
           <p class="lead">Dr. Sushil Shukla is a specialist in Pediatric Interventional Cardiology, having performed more than **5,000 pediatric and congenital interventions** and **10,000 diagnostic catheterizations**.</p>
           <p>These advanced procedures are performed in specialized cardiac catheterization labs. Using thin, flexible tubes (catheters) threaded through blood vessels, congenital defects can be treated without requiring open-heart surgery, resulting in shorter recovery times and minimal discomfort for children.</p>
+          <a href="patient-journey.html" class="btn btn-primary btn-lg mt-3"><i class="fas fa-route me-2"></i> View Your Child's Journey ➔</a>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
           <div class="p-4 bg-light rounded shadow-sm">
@@ -156,7 +158,72 @@
         </div>
       </div>
     </div>
+
+  <!-- PDA DEVICE CLOSURE VIDEO SECTION -->
+  <section id="pda-procedure-section" class="section-padding pda-video-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Procedure Highlight</span>
+        <h2 class="heading">PDA Device Closure</h2>
+        <p class="section-sub">A safe, minimally invasive catheter-based therapy to treat Patent Ductus Arteriosus (PDA) in infants and children.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 bg-light rounded shadow-sm border mb-4">
+            <p class="lead mb-0 text-center text-dark">
+              Patent Ductus Arteriosus (PDA) is a persistent opening between the two major blood vessels leading from the heart. PDA Device Closure closes this channel using an occlusion device delivered through a catheter, avoiding the need for open-heart surgery.
+            </p>
+          </div>
+          
+          <div class="video-wrapper">
+            <!-- Accessible video controls, preload metadata, click-to-play functionality -->
+            <video id="pdaVideo" class="video-container" controls preload="metadata">
+              <source src="pda-device-closure.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            
+            <div class="video-overlay" id="videoOverlay">
+              <div class="play-btn-circle">
+                <i class="fas fa-play"></i>
+              </div>
+              <span class="video-caption-overlay">Watch Clinical Procedure Video</span>
+            </div>
+          </div>
+          <p class="text-center text-muted small mt-3"><i class="fas fa-video me-1"></i> Clinical Procedure Video: Demonstrating transcatheter PDA device occlusion.</p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Script block to handle play trigger and hide overlay -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('pdaVideo');
+      const overlay = document.getElementById('videoOverlay');
+      
+      if (video && overlay) {
+        // Play video when clicking the overlay
+        overlay.addEventListener('click', function() {
+          video.play();
+          overlay.classList.add('hidden');
+        });
+
+        // Toggle overlay visibility when video status changes manually
+        video.addEventListener('play', function() {
+          overlay.classList.add('hidden');
+        });
+
+        video.addEventListener('pause', function() {
+          overlay.classList.remove('hidden');
+        });
+
+        video.addEventListener('ended', function() {
+          overlay.classList.remove('hidden');
+        });
+      }
+    });
+  </script>
 
   <!-- PROCEDURE FOCUS DETAILS -->
   <section class="section-padding" style="background:var(--light);">
@@ -192,6 +259,62 @@
     </div>
   </section>
 
+  <!-- CLINICAL CASE GALLERY -->
+  <section class="section-padding" style="background:var(--white); border-top: 1px solid rgba(0,0,0,.05);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Clinical Archives</span>
+        <h2 class="heading">Procedure Case Gallery</h2>
+        <p class="section-sub">Actual clinical cases and imaging of pediatric interventional cardiology procedures performed under the care of Dr. Sushil Shukla.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- PDA Closure Case 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item rounded overflow-hidden shadow-sm bg-white p-2 border">
+            <img src="images/pda-closure-1.png" class="img-fluid w-100 rounded" style="aspect-ratio:1/1;object-fit:cover;" alt="PDA Device Closure Fluoroscopy">
+            <div class="p-3 text-center">
+              <h6 class="mb-1 text-primary">PDA Device Closure</h6>
+              <p class="small text-muted mb-0">Fluoroscopy showing transcatheter ductal occluder position.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PDA Closure Case 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item rounded overflow-hidden shadow-sm bg-white p-2 border">
+            <img src="images/pda-closure-2.png" class="img-fluid w-100 rounded" style="aspect-ratio:1/1;object-fit:cover;" alt="PDA Device Closure Procedure">
+            <div class="p-3 text-center">
+              <h6 class="mb-1 text-primary">Duct Occluding Device</h6>
+              <p class="small text-muted mb-0">Fluoroscopic check of the occlusion device delivery.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VSD Device Closure -->
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item rounded overflow-hidden shadow-sm bg-white p-2 border">
+            <img src="images/vsd-closure.png" class="img-fluid w-100 rounded" style="aspect-ratio:1/1;object-fit:cover;" alt="VSD Device Closure Echocardiography">
+            <div class="p-3 text-center">
+              <h6 class="mb-1 text-primary">VSD Device Closure</h6>
+              <p class="small text-muted mb-0">Color Doppler echo showing post-closure hemodynamic seal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RVOT Ballooning -->
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-item rounded overflow-hidden shadow-sm bg-white p-2 border">
+            <img src="images/rvot-ballooning.png" class="img-fluid w-100 rounded" style="aspect-ratio:1/1;object-fit:cover;" alt="RVOT Balloon Valvuloplasty">
+            <div class="p-3 text-center">
+              <h6 class="mb-1 text-primary">RVOT Ballooning</h6>
+              <p class="small text-muted mb-0">Catheter position for Right Ventricular Outflow Tract balloon dilatation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -199,7 +322,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <i class="fas fa-heartbeat"></i> Yatharth Super Speciality Hospital
+            <i class="fas fa-heartbeat"></i> Dr. Sushil Shukla
           </div>
           <p class="footer-desc">Providing ethical, affordable, and high-quality congenital and pediatric cardiac care to the community. Serving patients across Noida, Ghaziabad, Greater Noida, Gurgaon, Faridabad, Delhi NCR, and surrounding regions.</p>
           <div class="social-links">
@@ -215,6 +338,7 @@
           <a href="about.html"><i class="fas fa-chevron-right"></i> About Doctor</a>
           <a href="pediatric-cardiology.html"><i class="fas fa-chevron-right"></i> Pediatric Cardiology</a>
           <a href="interventional-cardiology.html"><i class="fas fa-chevron-right"></i> Interventional Cardiology</a>
+          <a href="patient-journey.html"><i class="fas fa-chevron-right"></i> Care Journey</a>
           <a href="blog.html"><i class="fas fa-chevron-right"></i> Blog & FAQs</a>
           <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact & Booking</a>
         </div>
@@ -222,21 +346,21 @@
           <h3>Contact Info</h3>
           <p><i class="fas fa-phone"></i> +91 95601 461999</p>
           <p><i class="fas fa-envelope"></i> nicedocsush@gmail.com</p>
-          <p><i class="fas fa-map-marker-alt"></i> Yatharth Hospital,<br>Noida, Delhi NCR</p>
+          <p><i class="fas fa-map-marker-alt"></i> Dr. Sushil Shukla,<br>Noida, Delhi NCR</p>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
           <p style="font-size:13px;opacity:.6;">
             <i class="fas fa-search"></i> Find us on: &nbsp;
-            <a href="https://nicedocsush.github.io/dr-sushil-shukla/" style="color:white;">Yatharth Super Speciality Hospital</a> &nbsp;|&nbsp;
-            <a href="https://www.google.com/search?q=Yatharth%20Super%20Speciality%20Hospital+Noida" target="_blank" style="color:#4285F4;">Google Maps</a>
+            <a href="https://nicedocsush.github.io/dr-sushil-shukla/" style="color:white;">Dr. Sushil Shukla</a> &nbsp;|&nbsp;
+            <a href="https://www.google.com/search?q=Dr.+Sushil+Shukla+Pediatric+Cardiologist+Noida" target="_blank" style="color:#4285F4;">Google Maps</a>
           </p>
         </div>
       </div>
     </div>
     <hr>
-    <p class="copyright">© 2026 <strong>Yatharth Super Speciality Hospital</strong>. All Rights Reserved. Designed with <i class="fas fa-heart" style="color:#d90429;"></i></p>
+    <p class="copyright">© 2026 <strong>Dr. Sushil Shukla</strong>. All Rights Reserved. Designed with <i class="fas fa-heart" style="color:#d90429;"></i></p>
   </footer>
 
   <!-- FLOATING WIDGETS -->

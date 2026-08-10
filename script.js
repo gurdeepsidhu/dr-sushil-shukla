@@ -1,5 +1,5 @@
 /* ==========================================
-   Yatharth Super Speciality Hospital — Premium JavaScript
+   Dr. Sushil Shukla — Premium JavaScript
    Version 2.0
    Features: AOS, Swiper, Navbar, Counter,
    Typewriter, Back to Top, Ripple, Floating Hearts
@@ -457,8 +457,8 @@ if (appointmentForm) {
    ============================== */
 window.addEventListener('load', () => {
   setTimeout(() => {
-    console.log('❤️ Welcome to Yatharth Super Speciality Hospital — Your Heart Matters to Us!');
-    console.log('📍 Yatharth Super Speciality Hospital, Noida | 📞 +91 95601 461999');
+    console.log('❤️ Welcome to Dr. Sushil Shukla\'s Pediatric & Congenital Heart Care!');
+    console.log('📍 Dr. Sushil Shukla, Noida | 📞 +91 95601 461999');
   }, 1000);
 });
 
@@ -631,7 +631,7 @@ if ('serviceWorker' in navigator) {
 function applyCareer(position) {
   const msg = encodeURIComponent(
     'Namaste! 🙏\n\n' +
-    'I am applying for the position of: *' + position + '* at Yatharth Super Speciality Hospital.\n\n' +
+    'I am applying for the position of: *' + position + '* at Dr. Sushil Shukla\'s Clinic.\n\n' +
     'Please share my details:\n' +
     '👤 Name: _______________\n' +
     '🎓 Qualification: _______________\n' +
