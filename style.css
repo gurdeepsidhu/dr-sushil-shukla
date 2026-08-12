@@ -469,7 +469,9 @@ img {
 }
 
 .hero-img {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
   border-radius: 30px;
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
@@ -602,7 +604,9 @@ img {
 }
 
 .about-img {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
   border-radius: 25px;
   box-shadow: var(--shadow-lg);
 }
@@ -938,7 +942,9 @@ img {
 }
 
 .doctor-img {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
   border-radius: 25px;
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
@@ -2113,7 +2119,7 @@ img {
 /* ==============================
    FLOATING BUTTONS
    ============================== */
-.whatsapp-float {
+.wa-btn {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -2132,12 +2138,12 @@ img {
   transition: var(--transition);
 }
 
-.whatsapp-float:hover {
+.wa-btn:hover {
   transform: scale(1.1);
   color: white;
 }
 
-.call-float {
+.phone-btn {
   position: fixed;
   bottom: 110px;
   right: 30px;
@@ -2155,7 +2161,7 @@ img {
   transition: var(--transition);
 }
 
-.call-float:hover {
+.phone-btn:hover {
   transform: scale(1.1);
   color: white;
 }
@@ -2199,7 +2205,7 @@ img {
     font-size: 44px;
   }
   .hero-img {
-    width: 350px;
+    max-width: 350px;
   }
 }
 
@@ -2269,7 +2275,7 @@ img {
   }
 
   .hero-img {
-    width: 300px;
+    max-width: 300px;
   }
 
   .heading {
@@ -2285,7 +2291,7 @@ img {
   }
 
   .about-img {
-    width: 280px;
+    max-width: 280px;
     margin-bottom: 30px;
   }
 
@@ -2319,7 +2325,7 @@ img {
   }
 
   .doctor-img {
-    width: 300px;
+    max-width: 300px;
     margin-bottom: 30px;
   }
 
@@ -2344,13 +2350,31 @@ img {
   }
 }
 
+@media (max-width: 767.98px) {
+  .emergency-banner .container {
+    justify-content: center !important;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .hero-text h1 {
     font-size: 32px;
   }
 
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
   .hero-img {
-    width: 260px;
+    max-width: 260px;
   }
 
   .price-amount {
@@ -2374,19 +2398,19 @@ img {
     font-size: 30px;
   }
 
-  .whatsapp-float,
-  .call-float {
+  .wa-btn,
+  .phone-btn {
     width: 55px;
     height: 55px;
     font-size: 26px;
   }
 
-  .whatsapp-float {
+  .wa-btn {
     right: 15px;
     bottom: 20px;
   }
 
-  .call-float {
+  .phone-btn {
     right: 15px;
     bottom: 90px;
     display: flex !important;
@@ -2405,7 +2429,7 @@ img {
   }
 
   .doctor-img {
-    width: 260px;
+    max-width: 260px;
   }
 
   .doctor-list {
