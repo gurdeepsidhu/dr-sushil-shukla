@@ -468,6 +468,27 @@ img {
   display: inline-block;
 }
 
+/* Tagline above hero photo */
+.hero-img-tagline {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--primary-dark);
+  background: linear-gradient(135deg, rgba(217,4,41,.06), rgba(11,94,215,.06));
+  border-left: 3px solid var(--primary);
+  padding: 10px 16px;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.hero-img-tagline i {
+  color: var(--primary);
+  margin-right: 6px;
+  opacity: 0.7;
+}
+
+
 .hero-img {
   width: 100%;
   max-width: 420px;

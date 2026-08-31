@@ -8,7 +8,7 @@
   <meta http-equiv="Expires" content="0">
   <script>
     (function() {
-      var key = 'shukla_v11_cache_purged';
+      var key = 'shukla_v12_cache_purged';
       if (!localStorage.getItem(key)) {
         localStorage.setItem(key, 'true');
         if ('serviceWorker' in navigator) {
@@ -53,7 +53,7 @@
   <meta name="apple-mobile-web-app-title" content="Dr. Sushil Shukla">
   
   <!-- Link to External Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2.0.1">
+  <link rel="stylesheet" href="style.css?v=2.0.2">
 </head>
 <body>
   <!-- PRELOADER -->
@@ -150,11 +150,11 @@
         <div class="col-lg-6" data-aos="fade-left">
           <div class="p-4 bg-light rounded shadow-sm">
             <h4 class="text-primary mb-3"><i class="fas fa-stethoscope me-2"></i> Key Non-Invasive Services</h4>
-            <div class="d-flex mb-3">
+            <div class="d-flex mb-3" id="fetal-echo">
               <div class="me-3 text-primary"><i class="fas fa-baby-carriage fa-2x"></i></div>
               <div>
-                <h5>Fetal Echocardiography</h5>
-                <p class="small text-muted">Advanced heart scans for pregnant mothers to detect congenital heart anomalies early and consult on post-natal clinical care.</p>
+                <h5>Fetal Echocardiography &amp; Prenatal Heart Assessment</h5>
+                <p class="small text-muted">Specialized fetal echocardiography for prenatal assessment of the baby's heart, including detection and detailed evaluation of suspected congenital heart defects, rhythm abnormalities, and other cardiac conditions. Early diagnosis enables appropriate counselling and coordinated planning of delivery and postnatal cardiac care when required.</p>
               </div>
             </div>
             <div class="d-flex mb-3">
@@ -422,6 +422,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=2.0.2"></script>
 </body>
 </html>
